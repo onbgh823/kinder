@@ -1,0 +1,287 @@
+@charset "utf-8";
+@import "reset.css";
+
+.row { max-width:1167px; margin:0 auto;}
+
+#header {position: fixed; width:100%; top:0; left:0; z-index: 99999; background: #fff; box-shadow: 0px 3px 3px #eee;}
+.topmenu .row { position:relative }    
+.topmenu { background:#f76f6f;
+    color:rgba(255,255,255,0.7);
+    padding:10px 0; letter-spacing:-0.5px; }
+.topmenu a { transition:all 0.5s;}     
+.topmenu a:hover {color:rgb(255, 255, 255, 1) }    
+.topmenu .sns a { padding-right:10px; font-size:12.2px;  }
+.topmenu .sns a:first-child span { font-size:11px }
+.topmenu .login { position:absolute; top:0; right:0 }
+.topmenu .login a { padding-left:10px; font-size:11px }
+.logoNav { position:relative; height:76px; }
+.logoNav h1 { color:#ffae3d; 
+    font-size:26.25px; line-height:76px;
+    font-weight:bold;  }
+/*서브메뉴가 있는 1단계에서 인라인블록 또는 플롯속성으로 푼다 인라인블록은 빈공간이 생기고 플롯은 빈틈없이 붙는다 */
+.logoNav .nav { position:absolute; top:0; right:0;z-index: 9999;}
+.logoNav .nav .depth1 > li { display:inline-block;/*float:left;*/
+    font-size:15.75px; line-height:76px; /*background: red;*/
+    padding-left:30px; font-weight:bold; position: relative;
+    transition:all 0.5s }
+.logoNav .nav .depth1 > li:hover { 
+    color:#ffd23c; }
+.logoNav .nav .depth1 > li:first-child { color:#ffd23c }
+.logoNav .nav .depth1 > li > a:after { 
+    content:'\f078';
+    font-family:'Font Awesome 5 Free';
+    font-weight:900;
+    color:#ddd; padding-left:10px; }
+.logoNav .nav .depth1 > li:first-child > a:after,
+.logoNav .nav .depth1 > li:nth-child(5) > a:after { visibility: hidden;}
+
+/*7-15*/
+.logoNav .depth2 {position: absolute; top:85%; left:0;/*border:1px solid lime;*/width:168px; background: #fff; border-radius: 5px; padding:0 15px; box-shadow: 0px 0px 15px #ddd; display: none;}
+.logoNav .depth2:before {content: ''; position: absolute; bottom: 100%; left:35px;border-bottom: 10px solid #fff; border-left: 10px solid transparent; border-right: 10px solid transparent}
+/*부모인 뎁스1의 li에 포지션랠러*//*엘아이와 같은 넓이로 */
+/*줄간격은 엘아이에서 줘야 라인-하잇이 뎁스2까지 상속됨 뎁스2에 다른값으로 변경*/
+.logoNav .depth1 > li:hover .depth2 {display: block;} 
+/* css에서는 모션이 딱딱해 이걸 부드럽게 하고싶으면 java로 */
+.logoNav .depth2 > li {line-height: 38px;font-size: 16px; color: #ffd23c;}
+/* width를 168px로 변경 */
+/* 뎁스1과 뎁스2 사이가 겹쳐져있다 그럴때 뎁스2에 톱값을 낮춘다 85정도 */
+/*삼각형 자체에 박스-쉐도우를 넣을수가없다*/
+
+
+
+
+#section {padding-top:117px;}/*스크롤을 내려도 헤더가 화면에 고정되게 해주는 역할 */
+.slideOuter { height:600px; 
+    overflow:hidden; position:relative; }
+.slideOuter .arr {
+    position:absolute; top:50%;
+    transform:translateY(-50%);
+    font-size:80px;
+    color:#fff }  
+.slideOuter .prev {left:100px}
+.slideOuter .next {right:100px}
+.slideOuter .dotBox { 
+    position:absolute; bottom:20px;
+    left:50%; 
+    transform:translateX(-50%) }
+.slideOuter .dotBox a {
+    display:inline-block;
+    width:15px; height:15px; 
+    background:#fff; 
+    opacity:0.6;
+    border-radius:50% }    
+.slideOuter .dotBox a.active {
+    opacity:1; }   
+
+.slideInner > div { 
+    height:600px;
+    background-size:cover; 
+    background-position:center; 
+    background-repeat:no-repeat; 
+    position:relative
+}
+.slideInner > div:before {
+    content:'';
+    position:absolute;
+    top:0; left:0; bottom:0; right:0;
+    background:rgba(0,0,0,0.3);
+}
+.slideInner > div:first-child { 
+    background-image:url(../images/main-cover1.min.jpg)}
+.slideInner > div:last-child { 
+    background-image:url(../images/main-cover2.min.jpg)}
+.slideInner > div > .text { 
+    position:absolute; top:50%; left:50%;
+    transform:translate(-50%, -50%);
+    text-align:center; color:#fff;
+    /* z-index:9999; */
+}
+.slideInner .text > p:first-child {
+    font-size:70px; 
+    text-shadow: -3px 3px 5px rgba(0, 0, 0, 0.5);
+}    
+.slideInner .text > p:nth-child(2) {
+    font-size:19.25px; 
+    text-shadow: -2px 2px 5px rgba(0, 0, 0, 0.5);
+    margin:20px 0px 30px } 
+.slideInner .text > p:nth-child(3) > a { display:inline-block; 
+    padding:14px 28px; font-size:14px;
+    border-radius:4px; }
+.slideInner .text > p:nth-child(3) > a:nth-child(1) { color:#fff; 
+    background:rgba(0,0,0,0.5)}
+.slideInner .text > p:nth-child(3) > a:nth-child(2) { color:#000; 
+    background:rgba(255,255,255,0.5)}    
+.slideInner .text > p:nth-child(3) > a:nth-child(1):hover { 
+    background:#ffd23c}
+.slideInner .text > p:nth-child(3) > a:nth-child(2):hover { color:#fff }
+       
+#section .title h2 { font-size:28px; color:#222;
+margin:20px 0 20px; font-weight:bold;
+text-align:center }
+#section .title p {
+    font-size:14px; color:#333;
+    margin-bottom:56px;
+    padding-bottom:25px; 
+    text-align:center; 
+    position:relative; }
+#section .title p:after {
+    content:''; width:100px; 
+    height:2px; 
+    background:#f77070;
+    position:absolute; bottom:0;
+    left:50%; margin-left:-50px;
+}
+#section .title p strong { 
+    font-weight:bold }
+
+.act { padding:80px 0 }
+.act ul li { float:left; width:24%;
+    background-size:auto;
+    background-repeat:no-repeat;
+    height:186px; margin:0 0.5%; 
+    position:relative }
+.act ul li:nth-child(1) {
+    background-image:url(../images/main-business1.min.jpg); }
+.act ul li:nth-child(1):before {
+    content:''; position:absolute;
+    top:0; left:0; right:0; bottom:0;
+    background-color: rgba(48, 120, 210, 0.5);
+}
+.act ul li:nth-child(2) {
+    background-image:url(../images/main-business2.min.jpg)
+}
+.act ul li:nth-child(2):before {
+    content:''; position:absolute;
+    top:0; left:0; right:0; bottom:0;
+    background-color: rgba(255, 174, 61, 0.6);
+}
+.act ul li:nth-child(3) {
+    background-image:url(../images/main-business3.min.jpg)
+}
+.act ul li:nth-child(3):before {
+    content:''; position:absolute;
+    top:0; left:0; right:0; bottom:0;
+    background-color: rgba(48, 205, 210, 0.5);
+}
+.act ul li:nth-child(4) {
+    background-image:url(../images/main-business4.min.jpg)
+}
+.act ul li:nth-child(4):before {
+    content:''; position:absolute;
+    top:0; left:0; right:0; bottom:0;
+    background-color: rgba(247, 111, 111, 0.5);
+}
+.act ul li div { 
+    position:absolute; top:10px; left:20px;
+    right:20px; bottom:10px; color:#fff; }
+.act ul li div h3 { margin:10px 0; 
+    font-size:19.25px; font-weight:bold }    
+.act ul li div p { font-size:14px; margin:15px 0;
+    line-height:1.5 }
+.act ul li div a { padding: 5px 20px;
+    font-size: 12px; line-height: 1.5;
+    border-radius: 3px;  color: #f8f9fa;
+    border:1px solid #f8f9fa; 
+    letter-spacing:0.5px;
+    transition:all 0.5s;
+ }
+.act ul li div a:hover { 
+    color:#212529; background-color:#f8f9fa }
+
+
+.curriInfo {padding:84px 0}
+.curriBox > .column { float:left; width:31.66% }/*32*3=96%*/
+/*두번째 div 바깥쪽 여백 필요 마진추가*/
+.curriBox > .column:nth-child(2) {margin: 0 2.5%;} /*2%2% =4%*/
+/*가로로 중간여백 */
+.curriBox > .column:first-child > div:first-child, 
+.curriBox > .column:nth-child(3) > div:first-child {margin-bottom: 15.5px}
+/*상하여백은 픽셀로 좌우여백은 %로 반응형디자인*/
+.curriBox > .column > div {position: relative; }
+/*-20바텀으로 나간 상태 그래서 오버플로우 히든 안보이게 해줘야하니까*/
+.curriBox .overlay {position: absolute; top:0; left:0; right:0; bottom:0; overflow: hidden;
+    background:-webkit-linear-gradient(left,#ffd23c, #ffae3d);
+    background:-moz-linear-gradient(right,#ffd23c, #ffae3d);
+    background:-o-linear-gradient(right,#ffd23c, #ffae3d);
+    background:linear-gradient(to right, #ffd23c, #ffae3d); opacity: 0; transition: all 0.5s;}
+.curriBox .column > div:hover .overlay {opacity: 0.8;}
+/*트랜지션은 후버하지않은 똑같은 곳에*/
+.curriBox .copy {position: absolute; bottom: -20px; left:20px; right:20px; /*background: red;*/color:#fff; transition: all 0.3s;}/*글자가 밑에서 위로 올라오는 느낌 출발점바텀을 -20으로 내려서 설정 후버했을때*/
+/*포지앱솔 때문에 상위코드에 포지션 렐러를 써야하는데 이미 포지션앱솔이 있다 그럴때 안써도된다*/
+.curriBox .column > div:hover .copy {bottom:0px;}/*바텀-20px에 대한 후버 트랜지션은 상위태그*/
+.curriBox .copy h3 {font-size: 24.5px; font-weight: bold; margin-bottom: 15px;} /*margin-bottom: 10px; p태그와 같아 합치기*/
+.curriBox .copy p {font-size: 14px; margin-bottom: 20px; line-height: 1.5; font-weight: bold;}
+
+
+
+.review { background:#fdeace; padding:84px 0px;}
+.review ul li { float:left; width:31.66%; /*background: red;*/}
+.review ul li:nth-child(2) {margin: 0px 2.5%}
+.review ul li > div {position: relative;}
+.review .quote {font-size:30px; color:#fff; width: 56px; height: 56px; background: #ffae3d; border-radius: 50%; text-align: center; line-height: 56px;/*중잉깂밎추기*/position: absolute; top:-28px;left:10px; z-index: 99999; }/*56의반 28*/
+.review .blockquote {background: #fff; font-size: 17.5px; padding:40px; border-radius: 4px; font-style: italic;line-height: 1.5;/*줄간격*/ position: relative;margin-bottom: 20px;}
+.review .blockquote:after {content:''; position: absolute; top:100%; left:40px; border-top:15px solid #fff; border-left:15px solid transparent; border-right: 15px solid transparent; /*border-bottom: 15px solid pink;*/} 
+/*흰색 박스 밖으로 뺴야하기때문에 바텀을 -20px 이방법보다 top 100퍼 하면 간단하게*/
+/*반대방향은 안써도돼 톱의 반대는 바텀 없애도되지만 나머지를 없애면 삼각형이 안보여 그래서 나머지 두개를 투명하게 색을 transparent*/
+/*부모높이 만큼 아래쪽에 top 100퍼*/
+.review .client {padding:0 20px; font-size: 20px; }
+.review .client p:nth-child(1) {color:#ffae3d;font-weight: bold; letter-spacing: -1px; }
+.review .client a {color:#f76f6f; font-weight: bold;}
+.review .client p:nth-child(2) {color:#fff; font-size:16px}
+
+
+
+
+.bestChoice {background: url(../images/main-bottomBanner.min.jpg) no-repeat; height: 160px; background-size:cover; background-attachment:fixed; font-size: 19.25px; color:#fff; text-align: center;line-height: 160px; font-weight: bold; background-position: center; position: relative;}
+/* .bestChoice:before {content:''; position: absolute; top:0; left:0; right:0; bottom:0; background: rgba(0,0,0,0.4); } */
+/* .bestChoice .row {position: relative;} */
+/*겹치는 순서때문에 포지션없는곳에 포지션 렐러 쓰면 위치가 바뀜*/
+
+/* 방법2 이게 더 간단 before content지우고 bestChoice .row {posi rela 지워야*/
+.bestChoice .overlay {position: absolute; top:0; left:0; right:0; bottom:0; background: rgba(0,0,0,0.4); }
+/*html에 overlay div연결*/
+
+
+
+.csNnotice { background:#f5f5f5;padding: 84px 0; color:#333}
+.csNnotice > .row > div { float:left; width:31.66%; /*background: pink;*/  }
+.csNnotice > .row > div:nth-child(2) {margin:0 2.5%}/*5% 100-5 95/3*/
+.csNnotice h2 {font-size: 21px; color: #222222; letter-spacing: -1px; font-weight: bold; border-bottom: 2px solid #383d41; padding-bottom: 5px;margin-bottom: 10px;}/*선 안쪽에 여백이 들어와야*/
+.csNnotice .cscenter p:nth-child(1),
+.csNnotice .cscenter p:nth-child(2) {font-size: 19.25px;  font-weight: bold;}
+.csNnotice .cscenter p:nth-child(3),
+.csNnotice .cscenter p:nth-child(4) {font-size: 14px; line-height: 1.5;}
+
+.csNnotice .consult {font-size: 14px; line-height: 1.5;}
+.csNnotice .consult a {display:block; padding:10px 20px; color:#fff; background:rgba(0,0,0,0.5); width:133px; text-align:center; margin-top:10px; border-radius:4px ; transition: all 0.4s;}
+.csNnotice .consult a:hover {background: #ffd23c;}
+
+.csNnotice .notice li {padding: 2px;}
+.csNnotice .notice a {font-size: 14px; }
+.csNnotice .notice a:hover {text-decoration: underline; color:#ffd23c}
+.csNnotice .notice a:before {content:'ㆍ';} 
+.csNnotice .notice a::after {content:'NEW'; font-size: 10px; color:yellowgreen; font-weight: bold;}
+
+.csNnotice .notice+.more {position: absolute; top:8px; right:0;padding:5px 10px; color:#fff; background: rgba(0,0,0,0.5);font-size: 12px; border-radius: 4px; }
+.csNnotice .row > div:nth-child(3) {position: relative; }
+.csNnotice .notice+.more:hover {background: #f77070;}
+
+
+
+
+
+#footer { text-align:center; font-size: 12.25px; font-family: '맑은고딕'; }
+.footerMenu {background:#eee; color:#333; padding:10px 0;}
+.footerMenu a {padding-left:0 11px; }
+.footerMenu a:before {content:'|'; padding-right: 11px; font-size: 6px; position: relative; top:-1px;}
+.footerMenu a:first-child:before {display: none;}
+
+
+.comInfo { background:#222; color:rgba(255, 255, 255, 0.5); padding: 40px 0; }
+.comInfo .sns a {font-size:17px; padding:0px 10px 15px; display: inline-block;}/*상우하좌*/
+
+.comInfo .info span {letter-spacing: -1px; padding-left: 5px;}
+.comInfo .info span:before {content:'|'; padding-right:7px; font-size: 6px; position:relative; top:1px;}
+
+
+.copyright { background:#0a0a0a; font-size: 10.5px; padding:10px 0px;color:#333}
