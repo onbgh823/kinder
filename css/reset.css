@@ -28,8 +28,8 @@ width: 1px; height: 1px; overflow: hidden;padding: 0px 0px; position: absolute; 
 /* 헤더의 픽스드때문에 안보여 렐러로 바꾸면 보임 */
 /* 안보이게 해야할때 width: 1px; height: 1px; 오버플로우되니까 히든사용overflow: hidden , 빈틈이 생겨서 패딩은 0px */
 /* 화면에서 안보이게 하려면 화면밖으로 나가게 하려면 스킵 a에 포지션앱솔을 쓰면 상위태그에 렐러를 줘야함 근데 굳이 스킵에 안줘도 되고 그 상위태그인 바디라서 안써도 된다 그리고 스킵에이포커스에 포지션 스타틱 그렇게 되면 헤더에 있던 포지션 렐러를 다시 포지션 픽스드로 바꾼다 */
-.skip a:focus {width: 100%; height: auto; padding:10px 0px; top:0px; position: relative; z-index: 99999999;}
-/* 탭키를 누르면  */
+.skip a:focus {width: 100%; height: auto; padding:10px 0px; top:0px; position: fixed; z-index: 99999999;}
+/* 탭키를 누르면 변화되는거 */
 /* 스타틱은 제트인텍스 못써 그래서 포지션을 렐러로 바꾸고 톱0 제트인덱스999999 */
 /*이렇게 해도 안됨 그럼 픽스드로 바꿔*/
-
+/*이 스킵은 리셋파일에서 원래파일로*/
