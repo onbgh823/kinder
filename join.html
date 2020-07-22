@@ -87,8 +87,66 @@
         </div>
     </header>
 
-    <section id="joinPage">
-        회원가입페이지
+    <section id="join_page">
+        <div class="join_box row">
+         <h2>회원가입</h2>    
+            <form action="#" method="post" class="join_form">
+                <fieldset>
+                    <legend>회원가입양식</legend>
+                    <p class="info_pilsoo pilsoo_item">필수입력</p>
+                    <!-- ul.info_list>il>label.tit_lbl+div.info_content -->
+                    <ul class="info_list">
+                        <li>
+                            <label for="email_lbl" class="tit_lbl pilsoo_item">이메일</label>
+                            <div class="info_content">
+                                <input type="text" id="email_lbl" class="w160">
+                                <span>@</span>
+                                <input type="text" id="domain" class="w160" disabled>
+                                <select id="email_choice" class="w160">
+                                    <option value="nochoice">-이메일선택-</option>
+                                    <option value="naver.com">네이버</option>
+                                    <option value="daum.net">다음</option>
+                                    <option value="self">직접입력</option>
+                                </select>                                       
+                            </div>
+                        </li>
+                        <li>
+                            <label for="name_lbl" class="tit_lbl pilsoo_item">작성자명</label>
+                            <div class="info_content">
+                                <input required class="w320" type="text" id="name_lbl" placeholder="이름을 입력해주세요.니이름 내이름">
+                            </div>
+                        </li>
+                        <li>
+                            <label for="password_lbl" class="tit_lbl pilsoo_item">비밀번호</label>
+                            <div class="info_content">
+                                <input class="w320" type="password" id="password_lbl" placeholder="비밀번호를 입력해주세요.아무도 모르게">
+                            </div>
+                        </li>
+                        <li>
+                            <label for="passwordok_lbl" class="tit_lbl pilsoo_item">비밀번호 확인</label>
+                            <div class="info_content">
+                                <input class="w320" type="password" id="passwordok_lbl" placeholder="비밀번호를 다시 입력해주세요. 두번하기 귀찮지?">
+                            </div>
+                        </li>
+                        <li>
+                            <label for="phone_lbl" class="tit_lbl pilsoo_item">연락처</label>
+                            <div class="info_content">
+                                <input autofocus class="w320" type="number" di="phone_lbl" placeholder='휴대폰 번호 "-"없이 숫자만 입력해주세요.'>
+                            </div>
+                        </li>
+                        <li>
+                            <label for="addr_lbl" class="tit_lbl">주소</label>
+                            <div class="info_content">
+                            <input class="w160 mtb3" type="text" id="addr_lbl"><button type="button">우편번호</button><br>
+                            <input class="w70p mtb3" type="text" id="addr1"> (도로명 주소)<br>
+                            <input class="w70p mtb3" type="text" id="addr2"> (지번 주소)<br>
+                            <input class="w70p mtb3" type="text" id="addr3"> (나머지 주소)          
+                            </div>
+                        </li>
+                    </ul>
+                </fieldset>
+            </form>
+        </div>
     </section>
 
     <footer id="footer">
@@ -137,3 +195,7 @@
 
 </body>
 </html>
+
+<!--disabled 접근불가 self 접근가능-->
+<!-- placeholder= ' "-" '-->
+<!-- 버튼태그는 인라인 -->

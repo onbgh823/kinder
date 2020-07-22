@@ -1,3 +1,83 @@
 @charset "utf-8";
 @import "reset.css";
 @import "common.css";
+
+
+#join_page {padding:217px 0 100px; }
+                    /*상 우좌 하*/
+#join_page h2 {
+    text-align:center;
+    font-size: 30px;
+    padding-bottom: 30px;
+}
+.join_form .info_pilsoo {
+    padding-left: 20px; 
+    padding-bottom: 10px; 
+    border-bottom: 2px solid #000;
+    font-size: 15px; color: red;
+}
+.join_form .pilsoo_item {
+    position: relative
+}    
+.join_form .pilsoo_item:before {
+    content: '*';
+    position: absolute; 
+    left: 5px; top: 3px; width: 15px;
+    font-weight: bold; 
+    font-size: 17px;
+    color: #f00;
+}
+/* li {background: seagreen;} */
+.join_form .info_list {
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+.join_form .info_list li {
+    padding: 8px 0;
+}
+.join_form .tit_lbl {
+    display: inline-block;
+    width: 20%;
+    line-height: 45px;
+    font-size: 17px;
+    font-weight: bold;
+    letter-spacing: -2px;
+    padding-left: 20px;
+    /* background: indianred; */
+}
+.join_form .info_content {
+    display: inline-block;
+    /* background:rgba(0, 0, 0, 0.1); */
+    width: 79%;
+    vertical-align: top;
+}
+.join_form .info_content input[type=text],
+.join_form .info_content input[type=password],
+.join_form .info_content input[type=number],
+.join_form .info_content select {
+    height: 45px;
+    border: 1px solid #ccc;
+    padding: 0 1em;
+    vertical-align: top;
+    border-radius: 70px;
+}
+.join_form .w320 {width: 320px;}
+.join_form .w160 {width: 160px;}
+.join_form .info_content span {line-height: 45px;}
+.join_form .w70p {width: 70%;}
+.join_form .mtb3 {margin: 3px 0;}
+
+
+
+
+
+
+
+
+
+
+/* label {width: 200px; line-height: 30px; display: inline-block;vertical-align:top} */
+/*인라인속성 넓이 높이가 먹히지 않아 디스플레이인라인블록 안하면*/
+/* input {width: 300px; height: 30px;vertical-align:top} */
+/* 넓이 높이 먹힘 인라인속성 , 정확한 높이 값 필요 박스가 있기때문에 */
+/* 줄높이에 간격발생 vertical-align:top 둘다 적용 */
