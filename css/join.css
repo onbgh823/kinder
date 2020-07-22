@@ -112,8 +112,9 @@
     margin: 0px 20px;
 }
 .join_form .btn input[type=submit] {background: red;}
-
-
+.join_form .btn input:hover {
+    cursor: pointer;
+}
 
 /* label {width: 200px; line-height: 30px; display: inline-block;vertical-align:top} */
 /*인라인속성 넓이 높이가 먹히지 않아 디스플레이인라인블록 안하면*/
