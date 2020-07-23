@@ -40,6 +40,7 @@
 /*  vertical-align: top; 박스가 밑으로 내려가있다 동일하게 맞춰주려면*/
 #login_page .login_content .idpw_box ::placeholder{ 
     padding: 0 10px;
+    font-style: italic;
 }
 #login_page .login_content button {
     width: 100px;
@@ -50,7 +51,7 @@
     vertical-align: top;
     margin-top: 10px;
     margin-left: 5px;
-    font-size: 2em;
+    font-size: 20px;
     border-radius: 10px;
 }
 /* 아이디찾기 비밀번호찾기 회원가입 체크박스-아이디저장, 보안접속*/
