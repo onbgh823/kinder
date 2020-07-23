@@ -53,7 +53,7 @@
 }
 .join_form .info_content input[type=text],
 .join_form .info_content input[type=password],
-.join_form .info_content input[type=number],
+.join_form .info_content input[type=tel],
 .join_form .info_content input[type=date],
 .join_form .info_content select {
     height: 45px;
