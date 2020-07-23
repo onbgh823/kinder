@@ -2,4 +2,71 @@
 @import "reset.css";
 @import "common.css";
 
+#login_page {padding:217px 0 100px; }
+                    /*상 우좌 하*/
+#login_page h2 {
+    text-align:center;
+    font-size: 30px;
+    padding-bottom: 30px;
+}
+/* #login_page legend {display: block;} */
+#login_page .login_content {
+    padding:150px 0; 
+    border: 1px solid #ccc;
+    text-align: center;
+    margin-top: 20px;
+}
+#login_page .login_content .idpw_box{
+    display: inline-block;
+}
+#login_page .login_content .idpw_box label{
+    width: 100px;
+    display: inline-block;
+    text-align: left;
+    line-height: 40px;
+    margin: 10px 0;
+}
+/* label은 높이 넓이 안먹혀 디스플레이 인라인블락써야 */
+#login_page .login_content .idpw_box input{
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid #ccc;
+    vertical-align: top;
+    margin: 10px 0;
+    margin-right: 5px;
+    border-radius: 15px;
+}
+/*  vertical-align: top; 박스가 밑으로 내려가있다 동일하게 맞춰주려면*/
+#login_page .login_content .idpw_box ::placeholder{ 
+    padding: 0 10px;
+}
+#login_page .login_content button {
+    width: 100px;
+    height: 100px;
+    border: none;
+    background: slategray;
+    color: black;
+    vertical-align: top;
+    margin-top: 10px;
+    margin-left: 5px;
+    font-size: 2em;
+    border-radius: 10px;
+}
+/* 아이디찾기 비밀번호찾기 회원가입 체크박스-아이디저장, 보안접속*/
+#login_page .login_content .check {
+    /* background: orange; */
+    margin:20px 370px 20px;
+    text-align: left;
+    font-size: 13px;
+}
+
+
+#login_page .login_content button:hover {
+    cursor: pointer;
+}
+.login_content input[type=text],
+.login_content input[type=password] {
+    padding: 0 1em;
+}
 

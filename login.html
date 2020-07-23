@@ -88,8 +88,32 @@
     </header>
 
     <section id="login_page">
+        <!-- div.login_box.row -->
         <div class="login_box row">
             <h2>로그인</h2>
+            <form action="#" method="post" class="login_form">
+                <fieldset>
+                    <legend>기본정보</legend>
+                    <p class="comment">
+                        ※ 아이디/비밀번호를 잊으셨나요? 경희대학교 통합로그인 센터에서 아이디, 비밀번호를 확인하세요.
+                    </p>
+                    <div class="login_content">
+                        <div class="idpw_box">
+                            <label for="id_lbl">아이디</label>
+                            <input type="text" placeholder="아이디입력" id="id_lbl"><br>
+                            <label for="pw_lbl">비밀번호</label>
+                            <input type="password" placeholder="비밀번호입력" id="pw_lbl">
+                        </div>
+                        <button type="submit">로그인</button>
+                        <div class="check">
+                            <input type="checkbox" id="idsave" value="idsave" checked>
+                            <label for="idsave">아이디저장</label>
+                            <input type="checkbox" id="secacc" value="secacc" checked>
+                            <label for="secacc">보안접속</label>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
         </div>
     </section>
 
@@ -139,3 +163,7 @@
 
 </body>
 </html>
+<!-- 버튼 타입 섭밋 전송태그 -->
+<!-- 인풋은 인라인성격이기 때문에 줄바꿈이 않돼 br써야 -->
+<!-- 클릭하기전 미리 체크된 상태로 만들기
+html에 input에 checked, 라디오버튼에도 동일하게 사용가능 -->

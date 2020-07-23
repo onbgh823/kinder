@@ -12,7 +12,7 @@
     /*이렇게 해도 안됨 그럼 픽스드로 바꿔*/
     /*이 스킵은 리셋파일에서 원래파일로*/
 
-#header {position: fixed; width:100%; top:0; left:0; z-index: 99999; background: #fff; box-shadow: 0px 3px 3px #eee;}
+#header {position: fixed; width:100%; top:0; left:0;z-index: 999999; background: #fff; box-shadow: 0px 3px 3px #eee;}
 .topmenu .row { position:relative }    
 .topmenu { background:#f76f6f;
     color:rgba(255,255,255,0.7);
