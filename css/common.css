@@ -16,12 +16,35 @@
 .topmenu .row { position:relative }    
 .topmenu { background:#f76f6f;
     color:rgba(255,255,255,0.7);
-    padding:10px 0; letter-spacing:-0.5px; }
+    padding:10px 0; letter-spacing:-0.5px; position: relative;}
+
+.topmenu .chercher_boite {
+    position: absolute;
+    top: 25%; left: 26.8%;
+    z-index: 9999999999;
+}
+.topmenu .chercher_boite fieldset {
+    border: 1px solid rgba(255,255,255,0.7);
+    padding-right: 10px;
+    border-radius: 4px;
+}
+.topmenu .chercher_boite input  {
+    padding: 3px 2em;
+    border:none;
+    background: none;
+}
+
+.topmenu .chercher_boite button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
 .topmenu a { transition:all 0.5s;}     
 .topmenu a:hover {color:rgb(255, 255, 255, 1) }    
 .topmenu .sns a { padding-right:10px; font-size:12.2px;  }
 .topmenu .sns a:first-child span { font-size:11px }
-.topmenu .login { position:absolute; top:0; right:0;color:red}
+.topmenu .login { position:absolute; top:0; right:0;color:rgba(255,255,255,0.7)}
 .topmenu .login a { padding-left:10px; font-size:11px }
 .logoNav { position:relative; height:76px; }
 .logoNav h1 { color:#ffae3d; 

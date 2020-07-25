@@ -1,0 +1,23 @@
+@charset "utf-8";
+
+
+.topmenu {position: relative;}
+.topmenu .chercher_boite {
+    position: absolute;
+    top: 25%; left: 26.8%;
+}
+.topmenu .chercher_boite fieldset {
+    border: 1px solid rgba(255,255,255,0.7);
+    padding-right: 10px;
+    border-radius: 4px;
+}
+.topmenu .chercher_boite input  {
+    padding: 6px 2em;
+    border:none;
+    background: none;
+}
+
+.topmenu .chercher_boite button {
+    background: none;
+    border: none;
+}
