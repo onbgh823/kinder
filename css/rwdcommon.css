@@ -53,6 +53,20 @@
             font-weight:bold;
             text-align: center;
         }
+        .logoNav .open_nav {
+            display: block;
+            position: absolute;
+            top: 50%; right: 10px;
+            transform: translateY(-50%);
+            font-size: 25px;
+        }
+        .logoNav .close_nav {
+            display:none;
+            position: absolute;
+            top: 50%; right: 10px;
+            transform: translateY(-50%);
+            font-size: 25px;
+        }
         .logoNav .nav { 
             position:static; 
             top:0; right:0;
