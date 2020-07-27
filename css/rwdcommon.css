@@ -1,0 +1,68 @@
+@charset "utf-8";
+
+@media only screen and (max-width:1170px) {
+    .row {padding: 0 10px;}
+}
+.topmenu .login {
+        position:absolute;
+        top:0; right:10px;
+        color:rgba(255,255,255,0.7)
+}
+@media only screen and (max-width:992px) {
+    .logoNav {
+        position:relative;
+        height:auto;
+        background: #fff;
+    }
+
+    .logoNav h1 { 
+        color:#ffae3d; 
+        font-size:26.25px; 
+        /* line-height:76px; */
+        padding:24.87px 0px 0px;
+        /* 0px을 하나더 추가하면 더 줄어든다 */
+        font-weight:bold;
+        text-align: center;
+    }
+    .logoNav .nav { 
+        position:static; 
+        top:0; right:0;
+        text-align: center;
+    }
+    
+    @media only screen and (max-width:841px) {
+        .topmenu .login {
+        position:absolute;
+        top:0; right:10px;
+        color:rgba(255,255,255,0.7);
+        display: none;
+}
+.topmenu .chercher_boite {
+    /* position: absolute;
+    top: 22%; left: 26.9%; */
+    z-index: 9999999999;
+    position: absolute;
+    top: 22%; right: 10px; transform: translate(0%);
+}
+        .logoNav h1 { 
+            color:#ffae3d; 
+            font-size:26.25px; 
+            /* line-height:76px; */
+            padding:30px 0px 30px;
+            /* 0px을 하나더 추가하면 더 줄어든다 */
+            font-weight:bold;
+            text-align: center;
+        }
+        .logoNav .nav { 
+            position:static; 
+            top:0; right:0;
+            text-align: center;
+            display: none;
+        }
+        
+    } 
+
+/* 앱솔은 패딩좌우가 안먹혀 */
+/* 성격이 인라인인 것을 가운데 정렬할때는 text-align:center, 플롯이 되어있었다면 text-align center는 적용되지 않는다*/
+/* row값의 패딩과 맞춰줌 순서중요 */
+/* 미디어에 위드뒤에 ;찍으면 에러 */

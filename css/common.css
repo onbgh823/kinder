@@ -19,11 +19,11 @@
     padding:10px 0; letter-spacing:-0.5px; position: relative;}
 
 .topmenu .chercher_boite {
-    position: absolute;
-    top: 22%; left: 26.9%;
+    /* position: absolute;
+    top: 22%; left: 26.9%; */
     z-index: 9999999999;
     position: absolute;
-    /* top: 22%; left: 50%; transform: translate(-50%); */
+    top: 22%; right: 50%; transform: translate(50%);
 }
 .topmenu .chercher_boite fieldset {
     border: 2px solid rgba(255,255,255,0.7);
@@ -65,14 +65,17 @@
 .topmenu .login a { padding-left:10px; font-size:11px }
 .logoNav { position:relative; height:76px; }
 .logoNav h1 { color:#ffae3d; 
-    font-size:26.25px; line-height:76px;
-    font-weight:bold;  }
+    font-size:26.25px; padding:24.87px 0 24px; 
+    font-weight:bold; line-height: 15.75px; }
+    /*/line-height:76px--> 76-26.25=49.75 /2 24.87px */
 /*서브메뉴가 있는 1단계에서 인라인블록 또는 플롯속성으로 푼다 인라인블록은 빈공간이 생기고 플롯은 빈틈없이 붙는다 */
 .logoNav .nav { position:absolute; top:0; right:0;z-index: 9999;}
 .logoNav .nav .depth1 > li { display:inline-block;/*float:left;*/
-    font-size:15.75px; line-height:76px; /*background: red;*/
-    padding-left:30px; font-weight:bold; position: relative;
+    font-size:15.75px; /*line-height:76px;*/ /*background: red;*/
+    /*padding-left:30px;*/ font-weight:bold; position: relative;
     transition:all 0.5s }
+.logoNav .nav .depth1 > li >a {padding:24.87px 0px 24.87px 30px; display: inline-block;}
+/*li 와 같은 성격으로 디스플레이를 맞춤*/
 .logoNav .nav .depth1 > li:hover { 
     color:#ffd23c; }
 .logoNav .nav .depth1 > li:first-child { color:#ffd23c }
@@ -118,30 +121,3 @@
 .copyright { background:#0a0a0a; font-size: 10.5px; padding:10px 0px;color:#333}
 
 
-@media only screen and (max-width:1170px) {
-    .row {padding: 0 10px;}
-}
-@media only screen and (max-width:992px) {
-    .logoNav {
-        position:relative;
-        height:auto;
-        background: #fff;
-    }
-
-    .logoNav h1 { 
-        color:#ffae3d; 
-        font-size:26.25px; 
-        line-height:76px;
-        font-weight:bold;
-        text-align: center;
-    }
-    .logoNav .nav { 
-        position:static; 
-        top:0; right:0;
-        text-align: center;
-    }
-    
-}
-
-/* 앱솔은 패딩좌우가 안먹혀 */
-/* 성격이 인라인인 것을 가운데 정렬할때는 text-align:center */
