@@ -20,22 +20,23 @@
 
 .topmenu .chercher_boite {
     position: absolute;
-    top: 25%; left: 26.9%;
+    top: 22%; left: 26.9%;
     z-index: 9999999999;
     
 }
 .topmenu .chercher_boite fieldset {
-    border: 1px solid rgba(255,255,255,0.7);
+    border: 2px solid rgba(255,255,255,0.7);
     padding-right:10px;
     border-radius: 4px;
     
     
 }
 .topmenu .chercher_boite input  {
-    padding: 3px 2em;
+    padding: 2px 2em;
     border:none;
     background: none;
     font-weight: bold;
+    color: rgba(255,255,255,0.7);
 }
 .topmenu .chercher_boite button {
     background: none;
@@ -43,7 +44,10 @@
     cursor: pointer;
     color: rgba(255,255,255,0.7);
 }
-
+.topmenu .chercher_boite ::placeholder {
+    color:rgba(255,255,255,0.7)
+}
+/* 띄어쓰기 */
 .topmenu a { transition:all 0.5s;}     
 .topmenu a:hover {color:rgb(255, 255, 255, 1) }    
 .topmenu .sns a { padding-right:10px; font-size:12.2px;  }
