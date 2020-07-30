@@ -64,6 +64,25 @@
     vertical-align: top;
     /* border-radius: 50%; */
 }
+/* 화살표 없애는 방법  안되는데???*/
+.join_form .info_content select {
+    -webkit-appearance:none;
+    appearance:none;
+    background: transparent;
+    z-index: 999;
+    /* 이게 제일 적절한방법 */
+}
+.join_form .info_content select::-ms-expand {
+    display:none;
+}
+/* .join_form .info_content .email_box {position: relative;} */
+.join_form .info_content .email_box:after {
+    content: '\f0dd'; font-family: 'Font Awesome 5 Free';
+    font-weight: 900; color: red;
+    line-height: 45px; display: inline-block;
+    transform: translateX(-30px);
+    /* position: relative;top: 0px; right: 20px; */
+}
 .join_form .w320 {width: 320px;}
 .join_form .w160 {width: 160px;}
 .join_form .info_content span {line-height: 45px;}
@@ -82,11 +101,53 @@
     cursor: pointer;
     background: #ddd;
 }
-.join_form .gender_area label,
+.join_form .gender_area label{
+    line-height: 45px;
+    padding-right: 15px;
+}
+.join_form .gender_area label::before {
+    content: '\f058'; font-family:'Font Awesome 5 Free'; 
+    font-weight: 400; color: #ddd;
+    /* margin-right: 15px; */
+    padding-right: 15px;
+    font-size: 20px;
+    transition: all 0.2s;
+}
+.join_form .gender_area input[type=radio]:checked + label::before {
+    font-weight: 900; color:rgb(27, 201, 27);
+    font-size: 40px;
+}
 .join_form .hobby_area label {
     line-height: 45px;
     padding-right: 15px;
 }
+.join_form .hobby_area label::before{
+    content:'\f4fc'; font-family:'Font Awesome 5 Free';
+    font-weight: 900; color: #ddd;
+    padding-right: 15px;
+    /* font-size: 20px; */
+    transform: scale(2);  
+    /* 여기서 먹히지 않는다-- display:inline-block 하면 먹힌다 */
+    transition: all 0.2s;
+    display: inline-block;
+}
+.join_form .hobby_area input[type=checkbox]:checked + label::before {
+    content:'\f274'; font-family: 'Font Awesome 5 Free';
+    font-weight: 900; color: rgb(27, 201, 27);
+    padding-right: 15px;
+    /* font-size: 40px; */
+    /* transform: scale(1.5);
+    display: inline-block; */
+    /* 여기서는 안먹히네?? */
+}
+.join_form .gender_area input[type=radio] {
+    display: none;
+}
+.join_form .hobby_area input[type=checkbox] {
+    display: none;
+
+}
+
 .join_form .info_content textarea {
     border: 1px solid #ccc;
     width: 70%;
