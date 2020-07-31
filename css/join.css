@@ -106,40 +106,41 @@
     padding-right: 15px;
 }
 .join_form .gender_area label::before {
-    content: '\f058'; font-family:'Font Awesome 5 Free'; 
-    font-weight: 400; color: #ddd;
-    /* margin-right: 15px; */
-    padding-right: 15px;
-    font-size: 20px;
-    transition: all 0.2s;
+    content: '';
+    display: inline-block;
+    margin-right: 8px;
+    width: 20px; height: 20px;
+    background-image: url(../images/sprite_img.png);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: -296px -258px;
+    position: relative; top: 4px;
 }
 .join_form .gender_area input[type=radio]:checked + label::before {
-    font-weight: 900; color:rgb(27, 201, 27);
-    font-size: 40px;
+    background-position: -296px -186px; 
 }
 .join_form .hobby_area label {
     line-height: 45px;
     padding-right: 15px;
 }
 .join_form .hobby_area label::before{
-    content:'\f4fc'; font-family:'Font Awesome 5 Free';
-    font-weight: 900; color: #ddd;
-    padding-right: 15px;
-    /* font-size: 20px; */
-    transform: scale(2);  
-    /* 여기서 먹히지 않는다-- display:inline-block 하면 먹힌다 */
-    transition: all 0.2s;
+    content:'';
     display: inline-block;
+    margin-right: 8px;
+    width: 20px; height: 20px;
+    background-image: url(../images/sprite_img.png);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: -296px -114px;
+    position: relative;  top: 4px;
+    transform: scale(0.5);
+    /* transition: all 0.5s; */
 }
 .join_form .hobby_area input[type=checkbox]:checked + label::before {
-    content:'\f274'; font-family: 'Font Awesome 5 Free';
-    font-weight: 900; color: rgb(27, 201, 27);
-    padding-right: 15px;
-    /* font-size: 40px; */
-    /* transform: scale(1.5);
-    display: inline-block; */
-    /* 여기서는 안먹히네?? */
+    background-position:-138px -182px ;
+    transform: scale(1.2);
 }
+
 .join_form .gender_area input[type=radio] {
     display: none;
 }
