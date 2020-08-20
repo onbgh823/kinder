@@ -98,7 +98,8 @@
 .logoNav .depth2:before {content: ''; position: absolute; bottom: 100%; left:35px;border-bottom: 10px solid #fff; border-left: 10px solid transparent; border-right: 10px solid transparent}
 /*부모인 뎁스1의 li에 포지션랠러*//*엘아이와 같은 넓이로 */
 /*줄간격은 엘아이에서 줘야 라인-하잇이 뎁스2까지 상속됨 뎁스2에 다른값으로 변경*/
-.logoNav .depth1 > li:hover .depth2 {display: block;} 
+/* 8월20일102번 주석 */
+/* .logoNav .depth1 > li:hover .depth2 {display: block;}  */
 /* css에서는 모션이 딱딱해 이걸 부드럽게 하고싶으면 java로 */
 .logoNav .depth2 > li {line-height: 38px;font-size: 16px; color: #ffd23c;}
 /* width를 168px로 변경 */
