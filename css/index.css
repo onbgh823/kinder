@@ -170,7 +170,11 @@ text-align:center }
 .curriBox .copy h3 {font-size: 24.5px; font-weight: bold; margin-bottom: 15px;} /*margin-bottom: 10px; p태그와 같아 합치기*/
 .curriBox .copy p {font-size: 14px; margin-bottom: 20px; line-height: 1.5; font-weight: bold;}
 
-
+/* 1117 */
+.touchcon.row {}
+.touchcon .rotation {width:300%; overflow: hidden;}
+.touchcon ul {float: left; overflow: hidden;}
+.touchcon ul li {float: left; width: 25%;}
 
 .review { background:#fdeace; padding:84px 0px;}
 .review ul li { float:left; width:31.66%; /*background: red;*/}
